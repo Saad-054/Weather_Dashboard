@@ -1,0 +1,41 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: arial, sans-serif;
+}
+
+.weather-header {
+    background-color: black;
+    padding: 10px;
+}
+
+.weather-header h1 {
+    font-size: 24px;
+    color: white;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+.weather-search {
+    width: 70%;
+    padding: 8px;
+}
+
+.search-button {
+    padding: 8px 15px;
+}
+
+.weather-hr {
+    margin-top: 15px;
+}
+
+.list-group {
+    margin-top: 20px;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
