@@ -39,3 +39,36 @@ body {
     cursor: pointer;
 }
 
+.mt-3 {
+    margin-top: 15px;
+}
+
+.forecast-card {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px black(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.forecast-card {
+    background-color: white;
+    border-color: blue;
+}
+
+.future-card {
+    background-color: white;
+}
+
