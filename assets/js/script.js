@@ -26,7 +26,32 @@ $(document).ready(function() {
         });
     }
 
+    function displayWeatherData(currentData, forecast Data) {
+        const cityName = currentData.name;
+        const currentTemperature = currentData.main.temp;
+        const currentHumidity = currentData.main.humidity;
+        const currentWindSpped = currentData.wind.speed;
 
+        todaySection.html(`<h2>${cityName}</h2>
+            <p>Current Temperature: ${currentTemperature}°C</p>
+            <p>Humidity: ${currentHumidity}%</p>
+            <p>Wind Speed: ${currentWindSpped} m/s</p>`);
+
+        forecastSection.empty();
+        forecacastData.list.forEach(function(forecacastItem) {
+            const date = forecacastItem.dt_txt.split(" ")[0];
+            const Temperature = forecacastItem.main.temp;
+            const Humidity = forecacastItem.main.humidity;
+            const windSpeed = forecacastItem.main.wind.speed;
+
+            const forecacastData = $("<div>").addClass("forecast0card");
+            forecacastCard.html(`<p>Date: ${date}</p>
+                <p>Temperature: ${temperature}°C</p>
+                <p>Humidity: ${humidity}%</p>
+                <p>Wind Speed: ${windSpeed} m/s</p>`);
+            forecastSection.append(forecacastCard);
+        });
+    }
 
 
 
