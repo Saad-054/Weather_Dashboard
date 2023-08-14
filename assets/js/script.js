@@ -13,11 +13,22 @@ $(document).ready(function() {
         const currentApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         const forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
-        
-
-
-
+        $.ajax({
+            url: currentApiUrl,
+            method: "GET",
+        }).then(function(currentResponse) {
+            $.ajax({
+                url: forecastApiUrl,
+                method: "GET",
+            }).then(function(forecastResponse) {
+                displayWeatherData(currentResponse, forecastResponse);
+            });
+        });
     }
+
+
+
+
 
 
 
