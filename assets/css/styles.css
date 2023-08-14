@@ -5,7 +5,7 @@ body {
 }
 
 .weather-header {
-    background-color: black;
+    background-color: rgb(32, 29, 165);
     padding: 10px;
 }
 
@@ -37,7 +37,7 @@ body {
 
 .item-history {
     cursor: pointer;
-    background-color: grey;
+    background-color: rgb(180, 180, 180);
 }
 
 .mt-3 {
@@ -65,7 +65,7 @@ p {
 }
 
 .forecast-card {
-    background-color: white;
+    background-color: rgb(42, 45, 73);
     border-color: blue;
 }
 
@@ -76,5 +76,10 @@ p {
 
 .future-card {
     background-color: white;
+    border-color: blue;
 }
 
+body {
+    color: white;
+    font-family: arial, sans-serif;
+}
