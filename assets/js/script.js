@@ -1,6 +1,6 @@
 $(document).ready(function() {
     const apiKey = "6ef79105ea88baee642e2fc2d962e237";
-}
+
     // DOM Elements
     const searchForm = $("#search-form");;
     const searchInput = $("#search-input");
@@ -53,8 +53,26 @@ $(document).ready(function() {
         });
     }
 
+    searchForm.on("submit", function(event) {
+        event.preventDefault();
+        const city = searchInput.val().trim();
 
+        if (city !== "") {
+            fetchWeatherData(city);
+            addToHistory(city);
+        }
+    });
 
+    function addToHistory(city) {
+        const historyItem = $("<Li>").text(city);
+        historyList.prepend(historyItem);
+    }
+
+    historyList.on("click", "Li", function() {
+        const selectCity = $(this).text();
+        fetchWeatherData(selectedCity);
+    });
+});
 
 
 
