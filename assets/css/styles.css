@@ -18,10 +18,10 @@ body {
     margin-top: 20px;
 }
 
-.weather-search {
+/* .weather-search {
     width: 70%;
     padding: 8px;
-}
+} */
 
 .search-button {
     padding: 8px 15px;
@@ -31,12 +31,13 @@ body {
     margin-top: 15px;
 }
 
-.list-group {
+/* .list-group {
     margin-top: 20px;
-}
+} */
 
-.list-group-item {
+.item-history {
     cursor: pointer;
+    background-color: grey;
 }
 
 .mt-3 {
