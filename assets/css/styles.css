@@ -68,6 +68,11 @@ p {
     border-color: blue;
 }
 
+.today-card {
+    background-color: white;
+    border-color: blue;
+}
+
 .future-card {
     background-color: white;
 }
