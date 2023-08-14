@@ -1,10 +1,10 @@
 # Personal-Portfolio
 ## Description
-This repository houses a captivating and interactive Code Quiz web application, designed for users to test their coding knowledge. The quiz presents users with a series of multiple-choice questions and starts a timer upon clicking the "Start" button. As users answer each question, they are immediately presented with another question. However, incorrect answers lead to time deductions, adding an element of urgency and challenge to the quiz. The game concludes either when the timer reaches zero or when all questions have been answered.
+This repository houses a captivating weather dashboard application that provides users with up-to-date weather information for a city of their choice. The application is designed to meet the specific requirements outlined in the acceptance criteria. Users can search for a city using a form input, and upon submitting the search, they are presented with both the current weather conditions and a 5-day forecast for that city. The dashboard is structured to display essential weather details including the city name, date, weather condition icon, temperature, humidity, and wind speed. Additionally, the application keeps track of the search history, allowing users to easily access weather information for previously searched cities.
 
-To develop this application, three JavaScript files played essential roles. The index.html file provided the basic structure of the quiz, defining question elements, buttons, and score displays. The style.css file added visually appealing and user-friendly styling, ensuring a delightful user experience. The real magic, however, was embedded within the logic.js file. This JavaScript code orchestrated the entire quiz, handling the logic behind the timer, question display, answer validation, scoring, and the end-game event.
+In the process of developing the weather dashboard application, I employed a combination of HTML, CSS, and JavaScript. To fetch weather data, I integrated a third-party API, specifically the OpenWeatherMap API, which provided the necessary weather information for the user's selected city. I utilized AJAX requests to fetch both the current weather conditions and the 5-day forecast data, then processed and displayed the retrieved data on the dashboard. I also incorporated dynamic updates of HTML content using jQuery, ensuring that the information presented to users remains accurate and up-to-date.
 
-As a junior web developer, building this Code Quiz was a valuable learning experience. I sharpened my JavaScript skills and gained insights into DOM manipulation, event handling, and data management. The application introduced me to handling dynamic data using arrays and objects, as well as using local storage to save user data. This project strengthened my grasp of core JavaScript concepts and equipped me with problem-solving skills applicable to future web development endeavors. As I continue my journey, the lessons learned from this quiz application will undoubtedly prove valuable in creating more engaging and interactive web experiences for users.
+Throughout the development of this application, I gained valuable skills that spanned multiple areas of web development. I enhanced my understanding of making API requests, processing JSON data, and integrating external data sources into web applications. I also honed my skills in DOM manipulation using jQuery to dynamically update the user interface based on the received data. Additionally, I learned how to design a user-friendly interface that effectively conveys complex weather data in a clear and concise manner. This project allowed me to practice combining different technologies to create a functional and responsive web application that fulfills user needs for accessing weather information conveniently.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -18,15 +18,12 @@ As a junior web developer, building this Code Quiz was a valuable learning exper
 - cloned the repository on my Desktop using the SSH Key
 - Customised the content of the website by adding JavaScript
 ## Usage
-![website_image](./assets/images/First%20Page.JPG)
-![website_image](./assets/images/Question.JPG)
-![website_image](.//assets/images/Highscores.JPG)
-
+![website_image](./assets/images/site.JPG)
 ## Credits
 There were no collaborators for this project.
 
 ## Link
-https://saad-054.github.io/Code_Quiz/
+https://saad-054.github.io/Weather_Dashboard/
 
 ## License
 MIT License
