@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // API Key
     const apiKey = "6ef79105ea88baee642e2fc2d962e237";
 
     // DOM Elements
@@ -10,41 +11,42 @@ $(document).ready(function() {
 
     // function to obtain weather data from API
     function fetchWeatherData(city) {
+        // API URLs for weather forecast
         const currentApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         const forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
-        // fu
+        // JQuery AJAX to obtain current weather data
         $.ajax({
             url: currentApiUrl,
             method: "GET",
         }).then(function(currentResponse) {
-                // fu
+                // JQuery AJAX to obtain weather for next 5 days
             $.ajax({
                 url: forecastApiUrl,
                 method: "GET",
             }).then(function(forecastResponse) {
-                    // fu
+                // processes and displays weather
                 displayWeatherData(currentResponse, forecastResponse);
             });
         });
     }
 
-        // fu
+    // function for diplsaying weather data
     function displayWeatherData(currentData, forecastData) {
         console.log (currentData);
-            // fu
+        // current weather data extract
         const cityName = currentData.name;
         const currentTemperature = currentData.main.temp;
         const currentHumidity = currentData.main.humidity;
         const currentWindSpeed = currentData.wind.speed;
 
-            // fu
+        // current weather data UI elements
         todaySection.html(`<h2>${cityName} ${new Date(currentData.dt * 1000).toLocaleDateString()}</h2>
             <p>Current Temperature: ${currentTemperature}°C</p>
             <p>Humidity: ${currentHumidity}%</p>
             <p>Wind Speed: ${currentWindSpeed} KPH</p>`);
 
-            // fu
+        // clear section and displays wetaher for next 5 days
         forecastSection.empty();
         forecastData.list.forEach(function(forecastItem) {
             if (forecastItem.dt_txt.includes("12:00:00")) {
@@ -53,6 +55,7 @@ $(document).ready(function() {
                 const humidity = forecastItem.main.humidity;
                 const windSpeed = forecastItem.wind.speed;
     
+                // forecast card for weather
                 const forecastCard = $("<div>").addClass("col m-2 forecast-card");
                 forecastCard.html(`<p>Date: ${date}</p>
                     <img src = "https://openweathermap.org/img/wn/${forecastItem.weather[0].icon}.png"/>
@@ -65,7 +68,7 @@ $(document).ready(function() {
         });
     }
 
-        // fu
+    // event listenner for form submission
     searchForm.on("submit", function(event) {
         event.preventDefault();
         const city = searchInput.val().trim();
@@ -78,13 +81,13 @@ $(document).ready(function() {
 
     
     
-        // fu
+    // function for adding city to search history
     function addToHistory(city) {
         const historyItem = $("<li class='list-group-item mb-2 item-history'>").text(city);
         historyList.prepend(historyItem);
     }
 
-        // fu
+    // event listener for history list items
     historyList.on("click", "li", function() {
         const selectedCity = $(this).text();
         fetchWeatherData(selectedCity);
